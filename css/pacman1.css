@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Pacman;
+    src: url("../fonts/Minercraftory.ttf");
+}
+
+@font-face {
+    font-family: Pixel;
+    src: url("../fonts/MegamaxJonathanToo-YqOq2.ttf");
+}
+
+body {
+    position: relative;
+    background-image: url('../media/videos/pacman1/Background.gif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+body::before {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+body::after {
+    background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.6));
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.topBar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.topBar .button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.topButton {
+    padding: 10px 25px;
+    background-color: #070000a8;
+    border-radius: 50px;
+    border: 4px solid #0022ff;
+    text-transform: uppercase;
+    color: #fffb00;
+    font-family: Pixel;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.topButton:hover {
+    background-color: #002c9ab9;
+}
+
+.title {
+    font-family: Pacman;
+    font-size: 140px;
+    background: linear-gradient(white, rgb(255, 255, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px black);
+    margin-top: 150px;
+    text-align: center;
+}
+
+.title2 {
+    color: white;
+    filter: drop-shadow(0 0 5px black);
+    margin-bottom: 40px;
+}
+
+
+.boxes-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.box1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000000;
+    border: 4px solid #0059ff;
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+    width: 45%;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: 30px;
+}
+
+.box2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000000;
+    border: 4px solid #0059ff;
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+    width: 45%;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.box3 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000000;
+    border: 4px solid #0059ff;
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+    width: 45%;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: 30px;
+}
+
+.box4 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #000000;
+    border: 4px solid #0059ff;
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+    width: 45%;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.box img {
+    width: 100px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 20px;
+}
+
+.box p {
+    font-family: Pixel;
+    color: #f6ff00;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* ==============================================
+   DROPDOWN STYLING
+   ============================================== */
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #070000a8;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 4px solid #0022ff;
+    color: #fffb00;
+    text-transform: uppercase;
+    font-family: Pixel;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000206a8;
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: #fffb00;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: Pixel;
+}
+
+.dropdown-content a:hover {
+    background-color: #002c9ab9;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn:hover {
+    background-color: #002c9ab9;
+}
+
+@media (max-width: 1080px) {
+    .title {
+        font-size: 175px;
+    }
+
+    .box1,
+    .box2 {
+        width: 70%;
+        padding: 10px;
+    }
+
+    .box3,
+    .box4 {
+        width: 70%;
+        padding: 10px;
+    }
+
+    .box2 {
+        margin-top: 10%;
+    }
+
+    .box3 {
+        margin-top: 10%;
+    }
+
+    .box4 {
+        margin-top: 10%;
+    }
+
+    .topBar {
+        padding: 0 20px;
+    }
+}

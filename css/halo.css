@@ -1,0 +1,414 @@
+/* ==============================================
+   GLOBAL STYLING
+   ============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: HandelGo;
+    src: url("../fonts/HandelGothic Regular.ttf");
+}
+
+@font-face {
+    font-family: halo;
+    src: url("../fonts/Halo.ttf");
+}
+
+/* ==============================================
+   BODY STYLING
+   ============================================== */
+body {
+    min-width: 1080px;
+    min-height: 1920px;
+    position: relative;
+    background-image: url('../media/images/halo/main-background.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.6));
+    z-index: -1;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* ==============================================
+   MAIN CONTENT STYLING
+   ============================================== */
+.main-content {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* ==============================================
+   TOP BAR STYLING
+   ============================================== */
+
+.topBar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.topBar .button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.topButton {
+    padding: 10px 25px;
+    background-color: #4c71cfa8;
+    border-radius: 50px;
+    border: 4px solid #86acf2;
+    text-transform: uppercase;
+    color: #f6f6f6;
+    font-family: HandelGo;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.topButton:hover {
+    background-color: #86acf2;
+}
+
+/* ==============================================
+   TITLE STYLING
+   ============================================== */
+.title {
+    font-family: halo;
+    font-size: 140px;
+    background: linear-gradient(white, rgb(0, 40, 171));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 5px black);
+    margin-top: 150px;
+    text-align: center;
+}
+
+.title2 {
+    font-family: halo;
+    color: white;
+    filter: drop-shadow(0 0 5px black);
+    margin-bottom: 40px;
+}
+
+/* ==============================================
+   BOX CONTAINER STYLING
+   ============================================== */
+.boxes-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 300px;
+}
+
+.box1 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #4c71cfa8;
+    border: 4px solid #86acf2;
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+    width: 45%;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: 30px;
+}
+
+.box2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #4c71cfa8;
+    border: 4px solid #86acf2;
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+    width: 45%;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: 60px;
+}
+
+/* ==============================================
+   VIDEO BOX CONTAINER STYLING
+   ============================================== */
+.video-box-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../media/images/halo/halo-snow-warfare.png');
+    background-size: cover;
+    background-position: center;
+    padding: 50px 0;
+    height: 100vh;
+    margin-top: 50px;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.video-box-container::before {
+    content: "";
+    position: absolute;
+    top: -300px;
+    left: 0;
+    right: 0;
+    height: 300px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    z-index: -1;
+}
+
+.video-box-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.video-controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-controls button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.video-controls button:hover {
+    transform: scale(1.2);
+}
+
+.video-controls i {
+    font-size: 24px;
+}
+
+/* ==============================================
+   BOX 3 TITLE STYLING
+   ============================================== */
+.box3-title-box {
+    background-color: rgba(76, 113, 207, 0.7);
+    border: 4px solid #86acf2;
+    border-radius: 50px;
+    padding: 20px;
+    color: white;
+    margin-top: 50px;
+    width: 60%;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* ==============================================
+   BOX 3 CONTENT STYLING
+   ============================================== */
+.box3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    padding: 20px;
+    padding-top: 50px;
+    width: 80%;
+    margin-top: 50px;
+    height: auto;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.box3 video {
+    height: 100%;
+    width: 100%;
+}
+
+.box img {
+    width: 270px;
+    height: 200px;
+    border: #86acf2 4px solid;
+    border-radius: 20%;
+    margin: 0 20px;
+}
+
+.box p {
+    font-family: HandelGo;
+    color: #f6f6f6;
+    font-size: 25px;
+    line-height: 1.5;
+}
+
+/* ==============================================
+   DROPDOWN STYLING
+   ============================================== */
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #4c71cfa8;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 4px solid #86acf2;
+    color: #f6f6f6;
+    text-transform: uppercase;
+    font-family: HandelGo;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4c71cfa8;
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: HandelGo;
+}
+
+.dropdown-content a:hover {
+    background-color: #86acf2;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn:hover {
+    background-color: #86acf2;
+}
+
+/* ==============================================
+   BUTTONS
+   ============================================== */
+.styled-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #4c71cf;
+    border-radius: 50px;
+    border: 4px solid #86acf2;
+    color: white;
+    font-family: HandelGo;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #86acf2;
+    transform: scale(1.05);
+}
+
+/* ==============================================
+   ADJUSTMENTS
+   ============================================== */
+@media (max-width: 1080px) {
+    .title {
+        font-size: 160px;
+    }
+
+    .title2 {
+        font-size: 30px;
+    }
+
+    .box {
+        width: 70%;
+    }
+
+    .box3-content {
+        width: 100%;
+    }
+
+    .boxes-container {
+        margin-top: 600px;
+    }
+
+    .video-box-container {
+        margin-top: 240px;
+    }
+
+    .topBar {
+        padding: 0 20px;
+    }
+
+    #box3-1 {
+        margin-top: 200px;
+    }
+
+    #box3-2 {
+        margin-bottom: 200px;
+    }
+}

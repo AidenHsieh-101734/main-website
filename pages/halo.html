@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HALO</title>
+    <link rel="icon" href="../media/images/halo/web_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/halo.css">
+    <link rel="stylesheet" href="../css/transition.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="../js/main.js"></script>
+</head>
+
+<body>
+    <div class="main-content">
+        <div class="topBar">
+            <div class="button-group">
+                <a class="topButton white-text" href="../main.html">Home</a>
+                <div class="dropdown">
+                    <a class="topButton white-text dropbtn" href="#">Halo</a>
+                    <div class="dropdown-content">
+                        <a href="./halo.html">HALO Intro</a>
+                        <a href="./halo2.html">HALO Info</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="topButton white-text dropbtn" href="#">Pacman</a>
+                    <div class="dropdown-content">
+                        <a href="./pacman1.html">Pacman Info</a>
+                        <a href="./pacman2.html">Pacman History</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="center title">HALO</h1>
+        <h2 class="center title2">COMBAT EVOLVED</h2>
+
+        <div class="boxes-container">
+            <div class="box box1">
+                <img src="../media/videos/halo/masterchiefloop.gif" alt="The chief!">
+                <p>
+                    Speel als Master Chief, een supersoldaat die de mensheid beschermt tegen het gevaarlijke
+                    buitenaardse ras, het Covenant. Ontdek geheimen van een mysterieuze ringwereld en vecht voor het lot
+                    van het universum in <i>Halo: Combat Evolved</i>.
+                </p>
+
+            </div>
+            <div class="box box2">
+                <p>
+                    *Halo* staat bekend om zijn spannende gevechten, grootse ruimteschepen en krachtige wapens. Beleef
+                    een avontuur vol actie en ontdek waarom dit spel een mijlpaal is in de gamewereld.
+                </p>
+                <img src="../media/videos/halo/img2.gif" alt="Image 2">
+            </div>
+        </div>
+        <div class="fade-section"></div>
+        <div class="video-box-container">
+            <div class="box box3-title-box" id="box3-1">
+                <h1 style="font-family: HandelGo;">JOIN THE FIGHT.</h1>
+            </div>
+            <div class="box box3">
+                <video id="trailer1" src="../media/videos/halo/trailer2.mp4" autoplay loop muted></video>
+                <div class="video-controls">
+                    <button onclick="playPause('trailer1')">
+                        <i class="fas fa-pause" id="playPauseIcon1"></i>
+                    </button>
+                    <button onclick="muteUnmute('trailer1')">
+                        <i class="fas fa-volume-mute" id="muteIcon1"></i>
+                    </button>
+                    <input type="range" id="volumeSlider1" min="0" max="1" step="0.1" value="1" onchange="setVolume('trailer1')" />
+                </div>
+            </div>
+            <div class="box box3-title-box">
+                <h1 style="font-family: HandelGo;">DEMO TRAILER</h1>
+            </div>
+            <div class="box box3" id="box3-2">
+                <video id="trailer2" src="../media/videos/halo/trailer.mp4" autoplay loop muted></video>
+                <div class="video-controls">
+                    <button onclick="playPause('trailer2')">
+                        <i class="fas fa-pause" id="playPauseIcon2"></i>
+                    </button>
+                    <button onclick="muteUnmute('trailer2')">
+                        <i class="fas fa-volume-mute" id="muteIcon2"></i>
+                    </button>
+                    <input type="range" id="volumeSlider2" min="0" max="1" step="0.1" value="1" onchange="setVolume('trailer2')" />
+                </div>
+            </div>
+
+            <a href="./halo2.html" class="styled-button">Learn More</a>
+        </div>
+    </div>
+    <div class="loading-screen">LOADING...</div>
+</body>
+
+</html>

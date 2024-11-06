@@ -1,0 +1,380 @@
+/* ==============================================
+   GLOBAL STYLING
+   ============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 1080px;
+    min-height: 1920px;
+    position: relative;
+    background-image: url('../media/videos/main/background.gif');
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body::before,
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+body::before {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+body::after {
+    background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.6));
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@font-face {
+    font-family: HandelGo;
+    src: url("../fonts/HandelGothic Regular.ttf");
+}
+
+@font-face {
+    font-family: Pacman;
+    src: url("../fonts/PacMan.ttf");
+}
+
+@font-face {
+    font-family: halo;
+    src: url("../fonts/Halo.ttf");
+}
+
+/* ==============================================
+   TOP BAR
+   ============================================== */
+.topBar {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.topBar img {
+    display: block;
+    width: 50px;
+}
+
+.topBar .button-group {
+    display: flex;
+    gap: 10px;
+}
+
+.topButton {
+    padding: 10px 25px;
+    background-color: #4c71cf;
+    border-radius: 50px;
+    border: 4px solid #86acf2;
+    text-transform: uppercase;
+    color: #f6f6f6;
+    font-family: HandelGo;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.topButton:hover {
+    background-color: #86acf2;
+}
+
+/* ==============================================
+   HEADINGS AND TITLES
+   ============================================== */
+h3 {
+    position: relative;
+    font-family: Pacman;
+    color: #ffffff;
+}
+
+.title,
+.title2,
+.title3,
+.white-text {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    margin: 30px 0;
+}
+
+.title {
+    margin-top: 10%;
+    font-family: halo;
+    font-size: 140px;
+    background: linear-gradient(white, rgb(0, 40, 171));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgb(0, 85, 255));
+}
+
+.title2 {
+    font-family: Pacman;
+    font-size: 140px;
+    background: linear-gradient(white, rgb(255, 230, 0));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 7px yellow);
+}
+
+.title3 {
+    font-size: 50px;
+}
+
+.title4 {
+    top: -30%;
+    font-family: halo;
+    font-size: 50px;
+    background: linear-gradient(white, rgb(1, 39, 121));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgb(0, 55, 221));
+    text-align: center;
+}
+
+.title5 {
+    top: -30%;
+    font-family: Pacman;
+    font-size: 50px;
+    background: linear-gradient(white, rgb(226, 201, 12));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgb(255, 195, 0));
+    text-align: center;
+}
+
+.white-text {
+    font-family: HandelGo;
+    font-size: 20px;
+}
+
+/* ==============================================
+   MAIN CONTENT WRAPPER
+   ============================================== */
+.main-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 100px;
+}
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: 100%;
+}
+
+/* ==============================================
+   HALO SECTION
+   ============================================== */
+.halo-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    margin: 80% 0 80px;
+    text-align: center;
+}
+
+.halo-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.halo-image img {
+    max-width: 60%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.box-title {
+    background-color: #030508;
+    border: 4px solid #2e4374;
+    border-radius: 50px;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    width: 60%;
+    margin: 30px auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* ==============================================
+   PACMAN SECTION
+   ============================================== */
+.pacman-content {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.pacman-content .box-title {
+    background-color: #000000;
+    border: 4px solid #f0ed12;
+}
+
+/* ==============================================
+   BUTTONS
+   ============================================== */
+.styled-button {
+    display: inline-block;
+    padding: 15px 30px;
+    margin-top: 20px;
+    background-color: #4c71cf;
+    border-radius: 50px;
+    border: 4px solid #86acf2;
+    color: white;
+    font-family: HandelGo;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.styled-button:hover {
+    background-color: #86acf2;
+    transform: scale(1.05);
+}
+
+.pacman-content .styled-button {
+    background-color: #000000;
+    border: 4px solid #f0ed12;
+}
+
+/* ==============================================
+   DROPDOWN STYLING
+   ============================================== */
+.dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dropbtn {
+    background-color: #4c71cf;
+    padding: 10px 25px;
+    border-radius: 50px;
+    border: 4px solid #86acf2;
+    color: #f6f6f6;
+    text-transform: uppercase;
+    font-family: HandelGo;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4c71cf;
+    border-radius: 10px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: HandelGo;
+}
+
+.dropdown-content a:hover {
+    background-color: #86acf2;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn:hover {
+    background-color: #86acf2;
+}
+
+/* ==============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================== */
+@media (max-width: 1080px) {
+
+    .title {
+        margin-top: 30%;
+    }
+
+    .title,
+    .title2 {
+        font-size: 180px;
+    }
+
+    .topBar img {
+        width: 40px;
+    }
+
+    .box1,
+    .box2 {
+        width: 50%;
+        padding: 10px;
+    }
+
+    .box2 {
+        margin-top: 20%;
+    }
+
+    .topBar {
+        padding: 0 20px;
+    }
+
+    .pacman-content {
+        padding-bottom: 45%;
+    }
+}

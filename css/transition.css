@@ -1,0 +1,69 @@
+@font-face {
+    font-family: HandelGo;
+    src: url("../fonts/HandelGothic Regular.ttf");
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body {
+    opacity: 0;
+}
+
+body.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.loading-screen {   
+    color: #325297;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: HandelGo;
+    font-size: 170px;
+    background-image: url('../media/videos/main/background.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1s ease-in-out, visibility 0s linear 1s;
+}
+
+.loading-screen::before,
+.loading-screen::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
+.loading-screen::before {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    /* opacity: 0.5; */
+}
+
+.loading-screen::after {
+    background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.6));
+}
+
+.loading-screen.active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s ease-in-out, visibility 0s linear 0s;
+}
